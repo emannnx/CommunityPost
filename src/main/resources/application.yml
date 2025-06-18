@@ -1,0 +1,7 @@
+server:
+  port: 8091
+
+spring:
+  data:
+    mongodb:
+         uri: mongodb+srv://imanolabodebello8:Zarmanni%40123@cluster0.ydcgqpx.mongodb.net/userHealthhub?retryWrites=true&w=majority
