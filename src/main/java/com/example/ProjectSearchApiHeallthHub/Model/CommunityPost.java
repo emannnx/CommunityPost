@@ -16,16 +16,19 @@ public class CommunityPost {
     private String location;
     private LocalDateTime timestamp;
     private int likes;
+    private String category; // ✅ Added category field
 
     public CommunityPost() {}
 
-    public CommunityPost(String content, String imageUrl, String username, String location, LocalDateTime timestamp, int likes) {
+    // ✅ Updated constructor with category
+    public CommunityPost(String content, String imageUrl, String username, String location, LocalDateTime timestamp, int likes, String category) {
         this.content = content;
         this.imageUrl = imageUrl;
         this.username = username;
         this.location = location;
         this.timestamp = timestamp;
         this.likes = likes;
+        this.category = category;
     }
 
     // Getters and Setters
@@ -49,4 +52,7 @@ public class CommunityPost {
 
     public int getLikes() { return likes; }
     public void setLikes(int likes) { this.likes = likes; }
+
+    public String getCategory() { return category; } // ✅ Getter
+    public void setCategory(String category) { this.category = category; } // ✅ Setter
 }
