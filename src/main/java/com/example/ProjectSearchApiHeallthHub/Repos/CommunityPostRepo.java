@@ -11,3 +11,4 @@ public interface CommunityPostRepo extends MongoRepository<CommunityPost, String
     List<CommunityPost> findByContentContainingIgnoreCase(String keyword);
     List<CommunityPost> findByCategoryIgnoreCase(String category);
 }
+
