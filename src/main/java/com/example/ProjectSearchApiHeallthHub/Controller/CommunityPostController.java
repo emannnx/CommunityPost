@@ -52,12 +52,6 @@ public class CommunityPostController {
         return ResponseEntity.ok(results);
     }
 
-    @GetMapping("/category/{category}")
-    public List<CommunityPost> getByCategory(@PathVariable String category) {
-        return postRepo.findByCategoryIgnoreCase(category);
-    }
-
-
     // Get posts by username
     @GetMapping("/user/{username}")
     public List<CommunityPost> getByUsername(@PathVariable String username) {
@@ -80,12 +74,10 @@ public class CommunityPostController {
             post.setImageUrl(updatedPost.getImageUrl());
             post.setLocation(updatedPost.getLocation());
             post.setUsername(updatedPost.getUsername());
-            post.setCategory(updatedPost.getCategory()); // ✅
             return ResponseEntity.ok(postRepo.save(post));
         }
         return ResponseEntity.notFound().build();
     }
-
 
     // Delete a post
     @DeleteMapping("/delete/{id}")
